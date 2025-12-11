@@ -1,0 +1,458 @@
+.page {
+    animation: fadeIn 0.6s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.headerContent h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.headerContent p {
+    color: #94a3b8;
+    font-size: 1.1em;
+}
+
+.periodSelector {
+    display: flex;
+    gap: 10px;
+    background: #1e293b;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.periodBtn {
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.periodBtn:hover {
+    color: #e2e8f0;
+    background: #0f172a;
+}
+
+.periodBtn.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.metricCard {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+}
+
+.metricCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.metricHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.metricLabel {
+    color: #94a3b8;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.trendUp {
+    color: #10b981;
+}
+
+.trendDown {
+    color: #10b981;
+}
+
+.metricValue {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 8px;
+}
+
+.metricTarget {
+    color: #64748b;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+}
+
+.progressBar {
+    background: #0f172a;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chartCard {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+}
+
+.chartHeader {
+    margin-bottom: 20px;
+}
+
+.chartHeader h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    color: #e2e8f0;
+    margin-bottom: 5px;
+}
+
+.chartSubtitle {
+    color: #64748b;
+    font-size: 0.9em;
+}
+
+.chartInsight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 8px;
+    color: #10b981;
+    font-size: 0.9em;
+}
+
+.insightIcon {
+    flex-shrink: 0;
+}
+
+.recommendationsSection {
+    margin-bottom: 30px;
+}
+
+.sectionHeader {
+    margin-bottom: 25px;
+}
+
+.sectionHeader h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 2em;
+    color: #e2e8f0;
+    margin-bottom: 8px;
+}
+
+.sectionHeader p {
+    color: #94a3b8;
+    font-size: 1.05em;
+}
+
+.recommendationsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.recommendationCard {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #334155;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.recommendationCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.recommendationCard.success::before {
+    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.recommendationCard.warning::before {
+    background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+}
+
+.recommendationCard.info::before {
+    background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
+}
+
+.recommendationCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
+}
+
+.recHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.recIcon {
+    flex-shrink: 0;
+    color: #3b82f6;
+}
+
+.recHeaderText {
+    flex: 1;
+}
+
+.recHeaderText h3 {
+    font-size: 1.2em;
+    color: #e2e8f0;
+    margin-bottom: 8px;
+}
+
+.impactBadge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.impactBadge.high {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.impactBadge.medium {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.impactBadge.low {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+.recDescription {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.recFooter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.recMetric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.recMetricLabel {
+    color: #64748b;
+    font-size: 0.85em;
+}
+
+.recMetricValue {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.actionBtn {
+    width: 100%;
+    padding: 12px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.actionBtn:hover {
+    background: #1e293b;
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.insightsSummary {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+.insightsSummary h2 {
+    font-size: 2em;
+    color: #e2e8f0;
+    margin-bottom: 30px;
+}
+
+.insightsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.insightItem {
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.insightItem:hover {
+    transform: translateX(5px);
+    background: #1e293b;
+}
+
+.insightItemIcon {
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.insightItemContent {
+    flex: 1;
+}
+
+.insightItemContent h4 {
+    color: #94a3b8;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.insightValue {
+
+    .securityBadge {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #334155;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: all 0.3s ease;
+        color: #10b981;
+    }
+
+    .securityBadge:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+        border-color: #10b981;
+    }
+
+    .badgeContent {
+        flex: 1;
+    }
+
+    .badgeTitle {
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 3px;
+    }
+
+    .badgeDesc {
+        font-size: 0.85em;
+        color: #94a3b8;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .chartsGrid {
+            grid-template-columns: 1fr;
+        }
+
+        .securityGrid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .headerContent h1 {
+            font-size: 1.8em;
+        }
+
+        .metricsGrid {
+            grid-template-columns: 1fr;
+        }
+
+        .recommendationsGrid {
+            grid-template-columns: 1fr;
+        }
+
+        .insightsGrid {
+            grid-template-columns: 1fr;
+        }
+    }
